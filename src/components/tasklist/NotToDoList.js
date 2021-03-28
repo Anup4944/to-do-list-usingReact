@@ -1,7 +1,7 @@
 import React from 'react'
 import { Table,Button, Alert } from 'react-bootstrap';
 
-export const NotToDoList = ({notToDoList,markAsToDo,handleOnChangeNotToDo, totalHr}) => {
+export const NotToDoList = ({notToDoList,markAsToDo,handleOnChangeNotToDo, totalHr,notToDoItemToDelete}) => {
 
   console.log(notToDoList);
     return (
@@ -21,7 +21,7 @@ export const NotToDoList = ({notToDoList,markAsToDo,handleOnChangeNotToDo, total
     {notToDoList.map((row, i) => (
       <tr key={i}>
       <td>
-      <input type ="checkbox" defaultValue={i} onChange= {handleOnChangeNotToDo}/>{" "} 
+      <input type ="checkbox" defaultValue={i} onChange= {handleOnChangeNotToDo} checked={notToDoItemToDelete.includes(i)}/>{" "} 
       
       <label>{row?.title}</label>
       </td>

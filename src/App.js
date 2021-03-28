@@ -121,6 +121,7 @@ handleOnChange={handleOnChange}
 handleOnMarkAsNotToDo = {handleOnMarkAsNotToDo}
 taskLists = {taskLists}
 totalHrs={totalHrs}
+itemToDelete={itemToDelete}
 />
 </Col>
 <Col>
@@ -128,6 +129,7 @@ totalHrs={totalHrs}
 notToDoList={notToDoLists}
 markAsToDo={markAsToDo}
 totalHr= {notToDoTotalHrs}
+notToDoItemToDelete={notToDoItemToDelete}
 handleOnChangeNotToDo={handleOnChangeNotToDo}/>
 </Col>
     </Row>

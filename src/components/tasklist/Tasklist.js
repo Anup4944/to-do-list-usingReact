@@ -4,7 +4,7 @@ import { Table, Button, Alert } from 'react-bootstrap';
 
 
 
-export const Tasklist = ({taskLists, handleOnMarkAsNotToDo, handleOnChange, totalHrs}) => {
+export const Tasklist = ({taskLists, handleOnMarkAsNotToDo, handleOnChange, itemToDelete,totalHrs}) => {
     return (
         <>
     <h2>Task List</h2>
@@ -22,7 +22,7 @@ export const Tasklist = ({taskLists, handleOnMarkAsNotToDo, handleOnChange, tota
       <tr key={i}>
       
       <td>
-      <input type ="checkbox" defaultValue={i} onChange= {handleOnChange}/>{" "} 
+      <input type ="checkbox" defaultValue={i} onChange= {handleOnChange} checked={itemToDelete.includes(i)}/>{" "} 
         {row.title}</td>
       <td>{row.hr}</td>
       <td><Button 
@@ -40,7 +40,7 @@ export const Tasklist = ({taskLists, handleOnMarkAsNotToDo, handleOnChange, tota
   </tbody>
 </Table>
 <Alert variant= "primary">
-      Your total allocated time = {totalHrs} / 168 hours 
+      Your total allocated time = {totalHrs} / 160 hours 
   </Alert>
 </>
     )
